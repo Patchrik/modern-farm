@@ -19,10 +19,10 @@ console.log(sunflowerSeed);
 const soybeanSeed = createSoybean();
 console.log(soybeanSeed);
 
-let test2 = addPlant(cornSeed);
+addPlant(cornSeed);
 
-// addPlant(soybeanSeed);
+addPlant(soybeanSeed);
 
 const test = usePlants();
 
-console.log(test2);
+console.log(test);
