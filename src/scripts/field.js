@@ -1,7 +1,7 @@
 const fieldArray = [];
 
 export const addPlant = (seedObject) => {
-	if (seedObject.isArray === true) {
+	if (Array.isArray(seedObject) === true) {
 		for (let seedObjectHolder of seedObject) {
 			fieldArray.push(seedObjectHolder);
 		}
