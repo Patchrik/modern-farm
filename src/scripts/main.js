@@ -12,5 +12,3 @@ const yearlyPlan = createPlan();
 console.log('this is the yearly plan', yearlyPlan);
 
 plantSeeds(yearlyPlan);
-
-console.log(usePlants());
