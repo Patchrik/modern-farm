@@ -6,9 +6,20 @@ import { createSunflower } from './seeds/sunflower.js';
 import { createSoybean } from './seeds/soybean.js';
 import { addPlant, usePlants } from './field.js';
 import { plantSeeds } from './tractor.js';
+import { harvestPlants } from './harvester.js';
 
 const yearlyPlan = createPlan();
 
-console.log('this is the yearly plan', yearlyPlan);
+// console.log('this is the yearly plan', yearlyPlan);
 
 plantSeeds(yearlyPlan);
+
+// console.log(usePlants());
+
+let plantedField = usePlants();
+
+let havestedField = harvestPlants(plantedField);
+
+console.log('this is plantedField', plantedField);
+
+console.log('this is havestedField', havestedField);
