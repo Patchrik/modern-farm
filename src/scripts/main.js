@@ -1,12 +1,10 @@
 console.log('Welcome to the main module');
 
 import { createPlan } from './plan.js';
-import { createCorn } from './seeds/corn.js';
-import { createSunflower } from './seeds/sunflower.js';
-import { createSoybean } from './seeds/soybean.js';
 import { addPlant, usePlants } from './field.js';
 import { plantSeeds } from './tractor.js';
 import { harvestPlants } from './harvester.js';
+import { Catalog } from './catalog.js';
 
 const yearlyPlan = createPlan();
 
@@ -18,8 +16,10 @@ plantSeeds(yearlyPlan);
 
 let plantedField = usePlants();
 
-let havestedField = harvestPlants(plantedField);
+let harvestedField = harvestPlants(plantedField);
 
 console.log('this is plantedField', plantedField);
 
-console.log('this is havestedField', havestedField);
+console.log('this is harvestedField', harvestedField);
+
+Catalog(harvestedField);
